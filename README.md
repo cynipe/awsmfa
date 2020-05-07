@@ -20,12 +20,12 @@ awsmfa util script for cli
 $ make install AWS_ACCOUNT_ID=123456789012
 ```
 
-### Want to change the IAM_USER instead of whoami?
+Want to change the IAM_USER instead of whoami?
 ```
 $ make install AWS_ACCOUNT_ID=123456789012 AWS_IAM_USER=your-iam-user
 ```
 
-### Want to change the install dir?
+Want to change the install dir?
 ```
 $ make install AWS_ACCOUNT_ID=123456789012  BINDIR=~/.local/bin
 ```
@@ -39,7 +39,7 @@ MFA Token: 123456
 ~/.aws/credentials updated
 ```
 
-### Want to change DURATION_SEC to 3600 instead of 1800?
+Want to change DURATION_SEC to 3600 instead of 1800?
 ```
 $ awsmfa 3600
 MFA Token: 123456
@@ -47,8 +47,7 @@ MFA Token: 123456
 ~/.aws/credentials updated
 ```
 
-## For more?
-
+For more?
 ```
 cat Makefile
 ```
