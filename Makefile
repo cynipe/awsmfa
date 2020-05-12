@@ -17,9 +17,9 @@ install: $(BIN)
 	@echo "$(notdir $<) installed to $(dir $<)"
 
 $(BIN): awsmfa.tmpl __validate
-	sed -e 's!__AWS_ACCOUNT_ID__!$(AWS_ACCOUNT_ID)!; \
+	sed -e "s!__AWS_ACCOUNT_ID__!$(AWS_ACCOUNT_ID)!; \
 		s!__AWS_IAM_USER__!$(AWS_IAM_USER)!; \
-		s!__AWS_PROFILE_NAME__!$(AWS_PROFILE_NAME)!' $< > $@
+		s!__AWS_PROFILE_NAME__!$(AWS_PROFILE_NAME)!" $< > $@
 	chmod +x $@
 
 __validate:
